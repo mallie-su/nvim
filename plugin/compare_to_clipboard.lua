@@ -26,7 +26,7 @@ local function diff_buffers(buf1, buf2)
     end)
 end
 
-vim.api.nvim_create_user_command('Compare', 
+vim.api.nvim_create_user_command('Compare2Clipboard', 
     function(opts)
         print('Inside Compare user command')
         local currentFileScratchBuffer = vim.api.nvim_create_buf(false, true)
