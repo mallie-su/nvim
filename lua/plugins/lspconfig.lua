@@ -3,9 +3,8 @@ return {
     "neovim/nvim-lspconfig",
     dependencies = {
         "rafamadriz/friendly-snippets",
-        "saghen/blink.cmp",
         "nvim-telescope/telescope.nvim",
-        "saghen/blink.lib"
+        "hrsh7th/nvim-cmp",
     },
     config = function()
         vim.api.nvim_create_autocmd("LspAttach", {
@@ -92,8 +91,8 @@ return {
         -- LSP servers and clients are able to communicate to each other what features they support.
         --  By default, Neovim doesn't support everything that is in the LSP specification.
         --  When you add blink.cmp, luasnip, etc. Neovim now has *more* capabilities.
-        --  So, we create new capabilities with blink.cmp, and then broadcast that to the servers.
-        local capabilities = require("blink.cmp").get_lsp_capabilities()
+        --  So, we create new capabilities with nvim-cmp, and then broadcast that to the servers.
+        local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
         -- We cant use the key as the LSP name because some LSPs have special char in their name (like terraform-ls)
         local servers = {
