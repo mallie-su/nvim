@@ -25,3 +25,5 @@ vim.opt.expandtab = true
 -- indent a new line the same amount as the line just typed
 vim.opt.autoindent = true
 
+vim.opt.listchars = 'tab:⇤–⇥,space:·,trail:·,precedes:⇠,extends:⇢,nbsp:×,eol:¬'
+vim.opt.list = true
