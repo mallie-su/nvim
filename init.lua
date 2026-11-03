@@ -1,3 +1,4 @@
+require("config.utils")
 
 require("config.global")
 

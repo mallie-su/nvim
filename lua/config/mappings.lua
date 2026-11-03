@@ -15,3 +15,5 @@ vim.keymap.set("n", "<down>", '<cmd>echo "Use j to move down!"<CR>')
 
 
 vim.keymap.set("n", "<esc>", "<cmd>nohlsearch<CR>", { desc = "Remove search highlight" })
+
+vim.keymap.set("n", "<Leader>f", FormatCurrentFile, { desc = "Format current file" })
